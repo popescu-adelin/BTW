@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #162928;
+  position: relative;
+}
+.first-section {
+  background: linear-gradient(180deg, #47bceb 35.23%, #daf4ff 95%, #162928);
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+.first-section p {
+  font-size: 30px;
+}
+.logo {
+  margin-top: 100px;
+}
+h1 {
+  font-size: 60px;
+}
+.leave1 {
+  position: absolute;
+  left: 0;
+  bottom: -25%;
+  width: 60%;
+  display: none;
+}
+.leave2 {
+  position: absolute;
+  right: 0;
+  bottom: -30%;
+  width: 50%;
+  display: none;
+}
+.second-section {
+  background-color: #162928;
+  color: white;
+  text-align: left;
+}
+h2 {
+  font-size: 90px;
+}
+.second-section p {
+  font-size: 30px;
+}
+.third-section {
+  text-align: center;
+  color: white;
+}
+.third-section h2 {
+  text-align: left;
+}
+.galery-box {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  display: inline-block;
+}
+.galery {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+#open-img {
+  display: none;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+::-webkit-scrollbar {
+  height: 5px;
+  width: 10px;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}

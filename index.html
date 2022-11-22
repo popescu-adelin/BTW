@@ -11,24 +11,66 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="cssreset.css" />
+
     <link rel="stylesheet" href="stylesheet.css" />
+
+    <!-- Font -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>BTW</title>
   </head>
   <body>
+    <div class="header text-white">
+      <div class="container">
+        <div class="row py-4 align-items-center">
+          <div class="col-2">
+            <h3>BTW</h3>
+          </div>
+          <div class="col-10 text-end">
+            <ul>
+              <li class="me-2 active">Home</li>
+              <li class="mx-4">How To Startup</li>
+              <li class="mx-4">3.5% Program</li>
+              <li class="mx-4">Contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="first-section">
       <img class="logo" src="public/logo.svg" alt="" />
+      <div class="row">
+        <div class="col-6 text-end">
+          <img
+            class="logo-img"
+            src="public/BESTCJ_signature_white.png"
+            alt=""
+          />
+        </div>
+        <div class="col-6 text-start">
+          <img
+            class="logo-img"
+            src="public/BESTCJ_signature_white.png"
+            alt=""
+          />
+        </div>
+      </div>
       <div class="my-3">
         <h1>BEST Training Weekend</h1>
-        <p>Dexvolta-ti abilitatile</p>
+        <p class="mb-5 mt-2">Dexvolta-ti abilitatile</p>
       </div>
 
-      <div class="row mt-3">
-        <div class="col-6"><p>10-11 Decembrie</p></div>
-        <div class="col-6"><p>Infinity Observator</p></div>
+      <div class="row my-5">
+        <div class="col-6 py-3"><p>10-11 Decembrie</p></div>
+        <div class="col-6 py-3"><p>Infinity Observator</p></div>
       </div>
-      <img class="leave1" src="public/page1-left-leaves.svg" alt="" />
-      <img class="leave2" src="public/page1-right-leaves.svg" alt="" />
+      <img id="leave1" src="public/page1-left-leaves.svg" alt="" />
+      <img id="leave2" src="public/page1-right-leaves.svg" alt="" />
     </div>
     <div class="second-section container">
       <h2 class="my-5">Hello World</h2>
@@ -108,17 +150,47 @@
     <div id="open-img">
       <img class="img-fluid" src="public/eu.jpg" alt="" />
     </div>
+    <footer class="pb-3 text-white text-center">
+      <hr class="mb-4" />
+      <a href="">InstaLogo</a>
+      <a href="" class="mx-5">LinkedinLogo</a>
+      <a href="">FacebookLogo</a>
+      <p class="mt-2">©BEST-CLuj-Napoca-2022</p>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script>
+      let condition = false;
       for (let i = 1; i <= 13; i++) {
-        document.getElementById(i).addEventListener("click", function () {
+        document.getElementById(i).addEventListener("click", function (e) {
+          console.log(e);
           document.getElementById("open-img").style.display = "block";
+          condition = true;
         });
       }
+
       document
         .getElementById("open-img")
-        .addEventListener("click", function () {
+        .addEventListener("click", function (e) {
+          console.log(e);
           this.style.display = "none";
+          condition = false;
         });
+
+      $("#leave1").click(function () {
+        $("#leave1").animate({ left: "-200px" });
+      });
+      $("#leave2").click(function () {
+        $("#leave2").animate({ right: "-200px" });
+      });
     </script>
   </body>
 </html>

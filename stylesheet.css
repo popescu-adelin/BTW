@@ -37,7 +37,7 @@ h1 {
   bottom: 0vh;
   width: 400px;
   overflow: hidden;
-  /* display: none; */
+  display: none;
 }
 #leave2 {
   position: absolute;
@@ -45,8 +45,9 @@ h1 {
   bottom: 0vh;
   width: 400px;
   overflow: hidden;
-  /* display: none; */
+  display: none;
 }
+
 .second-section {
   background-color: #162928;
   color: white;
@@ -140,4 +141,53 @@ a {
 a:hover {
   text-decoration: none;
   color: rgb(177, 177, 177);
+}
+.footer-logo-img {
+  width: 100px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: white;
+  z-index: 2000;
+  display: none;
+  padding-top: 50px;
+  text-align: center;
+}
+.mobile-menu li {
+  display: block;
+  margin: 40px 2px;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/*sm*/
+@media (max-width: 575.98px) {
+  .logo {
+    width: 70%;
+  }
+  .logo-img {
+    width: 50%;
+  }
+}
+/* md */
+@media (max-width: 767.98px) {
+}
+/* lg */
+@media (max-width: 991.98px) {
+}
+/* xl */
+@media (max-width: 1199.98px) {
+}
+/* xxl */
+@media (max-width: 1399.98px) {
 }
